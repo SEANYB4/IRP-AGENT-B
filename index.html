@@ -32,7 +32,7 @@
         <p>Controls: WASD keys to move, SPACE to jump, CLICK to fire</p>
         <p>Game Rules: When the Player or Enemy reaches 5 kills the game data will be logged as experimental data.</p>
         <p>This data will be analayzed together with survey data to answer research questions relating to the effectiveness of the techniques used in this game to develop Bot AI.</p>
-        <p>Please complete one full game (first to 10 kills) against this version of the game and its counterpart (VERSION B).</p>
+        <p>Please complete one full game (first to 5 kills) against this version of the game and its counterpart (VERSION B).</p>
       </div>
       <div id="alert">
         IMPORTANT! PLEASE READ
@@ -133,5 +133,34 @@
       document.body.appendChild(script);
 
     </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+      import { getDatabase, ref, set, push } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBq3eW8qax9L1daIxlq3I2cCHbzCzH-pvs",
+        authDomain: "irp4-a3ae1.firebaseapp.com",
+        databaseURL: "https://irp4-a3ae1-default-rtdb.firebaseio.com",
+        projectId: "irp4-a3ae1",
+        storageBucket: "irp4-a3ae1.appspot.com",
+        messagingSenderId: "494923673970",
+        appId: "1:494923673970:web:10fe65d1ab296d1cdb2deb",
+        measurementId: "G-WDXCKSEQR8"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+
+      window.firebaseDatabase = database; // Expose the database to the global window object
+      window.ref = ref(database);
+      window.set = set;
+      window.push = push;
+
+  </script>
   </body>
 </html>

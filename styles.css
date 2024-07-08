@@ -11,8 +11,8 @@
     font-size: 12px;
 }
 
-#alert {
+#alert h2 {
 
     color: red;
-    font-size: larger;
+    
 }

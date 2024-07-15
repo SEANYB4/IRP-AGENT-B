@@ -3,8 +3,18 @@
     border: 1px solid black;
     display: flex;
     flex-direction: row;
-    /* hello */
     position: fixed;
+    
+    
+    
+    z-index: 2;
+    
+    
+}
+
+#full_screen {
+
+    right: 0;
 }
 
 
@@ -15,10 +25,18 @@
 #alert h2 {
 
     color: red;
+
+    
+}
+
+#alert {
+    font-size: 12px;
     
 }
 
 
-#alert {
+#agent_type {
+
     font-size: 12px;
 }
+
